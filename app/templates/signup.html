@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body %}
+<div style="margin-top: 50px;" class="ui container">
+  <h2 class="ui center aligned header" > Sign up | Study Abroad Circle </h2>
+  {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+  <form class="ui form" action="/signup" method="POST">
+    <div class="field">
+      <label>Username </label>
+      <input type=text name=username placeholder="Create username">
+    </div>
+    <div class="field">
+      <label>Password </label>
+      <input type=password name=password placeholder="Create password">
+    </div>
+    <div style="margin-top: 20px;">
+        <button class="ui right floated blue button" value=Signup>Sign up</button>
+    </div>
+  </form>
+{% for message in get_flashed_messages() %}
+            <div class=flash>{{ message }}</div>
+        {% endfor %} 
+</div>
+{% endblock %}

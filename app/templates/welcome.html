@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block body %}
+<div style="margin-top: 50px;" class="ui container">
+  <h2 class="ui center aligned header" > Welcome to Study Abroad Circle! </h2>
+  {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+  <a class="ui right floated blue button" href="/signup" method="GET" value=Signup>Sign up</a>
+  <a class="ui left floated green button" href="/login" method="GET">Log in</a>
+</div>
+{% for message in get_flashed_messages() %}
+            <div class=flash>{{ message }}</div>
+        {% endfor %} 
+</div>
+{% endblock %}

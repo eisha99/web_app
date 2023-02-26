@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <title> Study Abroad Circle </title>
+</head>
+<body>
+    <button class="ui olive button" style="margin-top: 20px; margin-left: 10px;"><a href="{{ url_for('log_out') }}">Log out</a></button>
+    <div style="margin-top: 50px;" class="ui container">
+    <h1 class="ui center aligned header"> Study Abroad Circle </h1>
+
+     <div class="ui pointing menu">
+        <a class="active item" href="">
+            <a href="{{ url_for('index') }}">Home</a></button>
+        </a>
+        <a class="item">
+            
+            <a href="{{ url_for('resources') }}">Resources</a></button>
+        </a>
+        <a class="item">
+    
+            <a href="{{ url_for('opportunities') }}">Opportunities</a></button> 
+        </a>
+        <a class="item">
+            <a href="{{ url_for('chats') }}">Chats</a></button> 
+          </a>
+          <a class="item">
+            <a href="{{ url_for('mentorship') }}">Mentorship</a></button> 
+          </a>
+
+
+</body>
+</html>
